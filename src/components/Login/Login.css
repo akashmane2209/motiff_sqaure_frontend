@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+h1 {
+  font-weight: 700;
+  color: #384047;
+  text-align: center;
+  line-height: 1.5em;
+  margin-bottom: 1.2em;
+  margin-top: 0.2em;
+}
+
+a {
+  font-size: 0.98em;
+  color: #8a97a0;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(3, 27, 161);
+}
+
+div.loginSidebar {
+  margin: 0;
+  padding: 0;
+  width: 25rem;
+  background-image: linear-gradient(-180deg, #932843, #581828);
+  color: whitesmoke;
+  position: fixed;
+  height: 100%;
+}
+
+div.content {
+  height: 100vh;
+
+  margin-left: 25rem;
+  padding: 1px 16px;
+  background-color: white;
+  background-image: url('https://res.cloudinary.com/motiff-square/image/upload/v1583416616/Images/bg-3_to4bbz.png');
+}
+
+@media screen and (max-width: 895px) {
+  div.loginSidebar {
+    visibility: hidden;
+    width: 0%;
+  }
+  div.content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.login-container {
+  display: flex;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  padding-block-start: 2em;
+  margin: 0 auto;
+}
+
+.form {
+  background-color: #fff;
+  padding: 2em;
+  padding-bottom: 3em;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+}
+.form-input {
+  color: #384047;
+  background-color: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border: none;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1.2em;
+  width: 100%;
+}
+.form-input:focus {
+  outline: none;
+}
+
+.button {
+  font-weight: 600;
+  text-align: center;
+  font-size: 19px;
+  color: #fff;
+  background-color: #932843;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+.button:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+a.link {
+  color: white;
+  font-weight: bolder;
+}
+
+@keyframes grow {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+.button .signup-message {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  filter: drop-shadow(-5px 5px 5px #222);
+}
