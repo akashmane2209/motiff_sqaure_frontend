@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.less';
 export class Loading extends Component {
   render() {
     return (

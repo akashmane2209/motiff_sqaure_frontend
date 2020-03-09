@@ -1,0 +1,12 @@
+export const GET_BLOGS = 'GET_BLOGS';
+export const ADD_BLOG = 'ADD_BLOG';
+export const UPDATE_BLOG = 'UPDATE_BLOG';
+
+export const GET_TESTIMONIALS = 'GET_TESTIMONIALS';
+export const ADD_TESTIMONIAL = 'ADD_TESTIMONIAL';
+export const UPDATE_TESTIMONIAL = 'UPDATE_TESTIMONIAL';
+export const UPDATE_HOME_TESTIMONIAL = 'UPDATE_HOME_TESTIMONIAL';
+
+export const GET_SITES = 'GET_SITES';
+export const ADD_SITE = 'ADD_SITE';
+export const UPDATE_SITE = 'UPDATE_SITE';

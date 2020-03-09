@@ -3,7 +3,12 @@ import { Row, Col } from 'reactstrap';
 import { Alert, message } from 'antd';
 import SimpleReactValidator from 'simple-react-validator';
 import { Redirect } from 'react-router-dom';
-import './Login.css';
+import './Login.less';
+
+import {
+  LocalStorageService,
+  STORAGE_KEYS
+} from '../../services/localStororage.service';
 
 class Login extends Component {
   constructor() {
@@ -21,7 +26,11 @@ class Login extends Component {
     logged: false
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    let isLoggedIn = LocalStorageService.getItem(STORAGE_KEYS.IS_ADMIN);
+    console.log(isLoggedIn);
+    if (isLoggedIn) this.props.history.push('/admin/dashboard');
+  }
 
   onChangeHandler = event => {
     this.setState({ [event.target.id]: event.target.value });
@@ -32,7 +41,8 @@ class Login extends Component {
     if (this.validator.allValid()) {
       const { username, password } = this.state;
       if (username === 'admin' && password === 'qpalzm1?') {
-        this.props.history.push('/dashboard');
+        this.props.history.push('/admin/dashboard');
+        LocalStorageService.addOrUpdateItem(STORAGE_KEYS.IS_ADMIN, true);
         message.success('Login Successful');
       } else {
         message.error('Invalid username or password');
@@ -54,6 +64,7 @@ class Login extends Component {
                   className='logo'
                   src='https://res.cloudinary.com/motiff-square/image/upload/v1583416657/Images/WhatsApp_Image_2020-02-08_at_7.56.53_PM_j2upgk.jpg'
                   height='50'
+                  alt='logo'
                 />
               </Col>
               <Col className='mt-4'>
@@ -85,7 +96,10 @@ class Login extends Component {
               <Col>
                 <h6 style={{ color: 'white' }} className='text-center'>
                   Developed By{' '}
-                  <a href='#' className='link'>
+                  <a
+                    href='https://www.linkedin.com/in/akash-anand-mane/'
+                    className='link'
+                  >
                     Akash Mane
                   </a>
                 </h6>
