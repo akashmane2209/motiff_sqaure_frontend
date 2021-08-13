@@ -5,6 +5,9 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard';
 class App extends React.Component {
+  constructor() {
+    console.log('constructor')
+  }
   render() {
     return (
       <div className='App'>
